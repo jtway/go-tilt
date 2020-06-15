@@ -1,5 +1,8 @@
 # Tilt API in Go
 
+[![GoDoc](https://godoc.org/github.com/alexhowarth/go-tilt?status.svg)](https://pkg.go.dev/github.com/alexhowarth/go-tilt)
+[![Go Report Card](https://goreportcard.com/badge/go-ble/ble)](https://goreportcard.com/report/github.com/alexhowarth/go-tilt)
+
 This package provides a Library for reading data from Tilt sensors.
 
 Tilt sensors are devices for brewers that read specific gravity and temperature during fermentation.
