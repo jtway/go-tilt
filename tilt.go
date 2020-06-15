@@ -56,7 +56,7 @@ func (t *Tilt) Celsius() float64 {
 	return math.Round(float64(t.temp-32)/1.8*100) / 100
 }
 
-func (t *Tilt) Farenheit() uint16 {
+func (t *Tilt) Fahrenheit() uint16 {
 	return t.temp
 }
 
@@ -70,7 +70,7 @@ func (t *Tilt) Colour() Colour {
 
 func (t *Tilt) Print() {
 	log.Printf("Tilt: %v", t.Colour())
-	log.Printf("Farenheit: %v\n", t.Farenheit())
+	log.Printf("Fahrenheit: %v\n", t.Fahrenheit())
 	log.Printf("Specific Gravity: %v\n", t.Gravity())
-	log.Printf("Celcius: %v\n", t.Celsius())
+	log.Printf("Celsius: %v\n", t.Celsius())
 }
