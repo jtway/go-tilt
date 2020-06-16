@@ -15,8 +15,14 @@ go get github.com/alexhowarth/go-tilt
 
 ## Usage
 
-See the examples directory.
+```go
+s := tilt.NewScanner()
+s.Scan(20 * time.Second)
 
+for _, t := range s.Tilts() {
+	t.Print()
+}
+```
 ## Compatibility
 
 This project currently uses a specific fork of go-ble that is compatible with both Linux and macOS.

@@ -1,3 +1,4 @@
+// Package tilt provides an interface to Tilt Bluetooth devices
 package tilt
 
 import (
@@ -45,6 +46,7 @@ func NewTilt(b *IBeacon) (t Tilt, err error) {
 	return
 }
 
+// IsTilt tests if the data is from a Tilt
 func IsTilt(d []byte) bool {
 	if len(d) >= 25 && hex.EncodeToString(d)[0:12] == tiltIdentifier {
 		return true
