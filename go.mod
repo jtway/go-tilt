@@ -1,4 +1,4 @@
-module github.com/alexhowarth/go-tilt
+module github.com/jtway/go-tilt
 
 go 1.14
 
