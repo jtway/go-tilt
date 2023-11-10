@@ -4,7 +4,7 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/alexhowarth/go-tilt"
+	"github.com/jtway/go-tilt"
 )
 
 func TestNewIBeacon(t *testing.T) {

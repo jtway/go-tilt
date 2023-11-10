@@ -13,7 +13,7 @@ import (
 // Scanner for Tilt devices
 type Scanner struct {
 	devices Devices
-        d ble.Device
+	d       ble.Device
 }
 
 // Devices stores discovered devices
@@ -30,17 +30,17 @@ func (s *Scanner) Scan(timeout time.Duration) {
 	log.Printf("Scanning for %v", timeout)
 
 	s.devices = make(map[Colour]Tilt)
-        var err error = nil
+	var err error = nil
 
 	if s.d == nil {
-	    s.d, err = dev.NewDevice("go-tilt")
-	    if err != nil {
-		log.Fatalf("Unable to initialise new device : %s", err)
-	    }
-	    ble.SetDefaultDevice(s.d)
-        }
+		s.d, err = dev.NewDevice("go-tilt")
+		if err != nil {
+			log.Fatalf("Unable to initialise new device : %s", err)
+		}
+		ble.SetDefaultDevice(s.d)
+	}
 	ctx := ble.WithSigHandler(context.WithTimeout(context.Background(), timeout))
-	err = ble.Scan(ctx, false, s.advHandler, advFilter)
+	err = ble.Scan(ctx, true, s.advHandler, advFilter)
 	if err != nil {
 		switch errors.Cause(err) {
 		case nil:

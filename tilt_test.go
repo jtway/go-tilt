@@ -4,7 +4,7 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/alexhowarth/go-tilt"
+	"github.com/jtway/go-tilt"
 )
 
 func TestNewTilt(t *testing.T) {
